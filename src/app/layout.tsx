@@ -1,12 +1,13 @@
 import "@/styles/globals.css";
 import { Inter } from "next/font/google";
-import Link from "next/link";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Shrek Routing App",
-  description: "A sample app with routing using the app router.",
+  description: "A Next.js app featuring Shrek-themed routing.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -22,25 +23,5 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </div>
       </body>
     </html>
-  );
-}
-
-function Navbar() {
-  return (
-    <nav className="h-6 bg-shrekNavbar p-8 flex justify-center items-center gap-10 font-bold text-xl w-3/4 mx-auto shadow-sm">
-      <Link href="/">Home</Link>
-      <Link href="/quotes">Shrek Quotes</Link>
-      <Link href="/donkey">Donkey</Link>
-      <Link href="/gallery">Gallery</Link>
-      <Link href="/meme">Meme</Link>
-    </nav>
-  );
-}
-
-function Footer() {
-  return (
-    <footer className="bg-shrekDarkGreen w-3/4 mx-auto h-10 text-white flex justify-center items-center p-10 text-center">
-      <p>Shrek is voiced by the "Groovy Baby!" guy.</p>
-    </footer>
   );
 }
